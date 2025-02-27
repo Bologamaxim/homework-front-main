@@ -5,17 +5,17 @@ type AddressType = {
 };
 
 type UserType = {
-  id: number,
+    id: number,
     name: string,
     age: number,
     address: AddressType,
 };
 
-type UserListPropsType = UserType[]
+type UserListPropsType = { users:UserType[] }
 
 
 
-export const UserList      = ({users}:{users: UserType[]}) => {
+export const UserList= (props:UserListPropsType) => {
 
   return (
     <div id={'hw01-users'}>
@@ -23,7 +23,7 @@ export const UserList      = ({users}:{users: UserType[]}) => {
 
 
       <ul>
-        {users.map((user:UserType) => ( // ВСЕ ТОВАРЫ В СТРАНУ ПРИЕЗЖАЮТ В КОНТЕЙНЕРАХ, А В РЕАКТЕ...
+        {props.users.map((user:UserType) => ( // ВСЕ ТОВАРЫ В СТРАНУ ПРИЕЗЖАЮТ В КОНТЕЙНЕРАХ, А В РЕАКТЕ...
           <li key={user.id} id={`hw01-user-${user.id}`}>
             <strong>{user.name}</strong> (Age: {user.age})<strong> Address:</strong>
             {user.address.street}, {user.address.city}
