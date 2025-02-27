@@ -7,7 +7,7 @@ import { HW4 } from './HW/4/HW4';
 function App() {
   return (
     <div className="App">
-      hello
+
       <HW1 />
       {/*<HW2 />*/}
       {/*<HW3 />*/}

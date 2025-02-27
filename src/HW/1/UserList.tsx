@@ -13,12 +13,9 @@ type UserType = {
 
 type UserListPropsType = UserType[]
 
-//   users: UserType; // ПО МОЕМУ ЧЕГО-ТО НЕ ХВАТАЕТ...
-// };
-//
 
-export const UserList:any= ({users}:{users: UserType[]}) => {
 
+export const UserList      = ({users}:{users: UserType[]}) => {
 
   return (
     <div id={'hw01-users'}>
